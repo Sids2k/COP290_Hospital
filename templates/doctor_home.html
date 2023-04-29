@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/doctor_home.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Welcome, Dr. Smith</h1>
+    <button id="viewForumBtn"><a href="{{url_for('doctorforum')}}">View Forum</a></button>
+    <button id="logoutBtn"><a href="{{url_for('home')}}">Log Out</a></button>
+  </header>
+
+  <div class="dashboard">
+    <div class="box">
+      <h2>Appointments</h2>
+      <div class="appointments">
+        <div class="appointment">
+          <h3>John Doe</h3>
+          <p>12:00 PM</p>
+          <p>Pending</p>
+        </div>
+        <div class="appointment">
+          <h3>Jane Smith</h3>
+          <p>2:00 PM</p>
+          <p>Confirmed</p>
+        </div>
+        <div class="appointment">
+          <h3>Mark Johnson</h3>
+          <p>3:30 PM</p>
+          <p>Cancelled</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Patients List</h2>
+      <div class="patients">
+        <ul>
+          <li>John Doe</li>
+          <li>Jane Smith</li>
+          <li>Mark Johnson</li>
+          <li>Alice Williams</li>
+          <li>Samuel Lee</li>
+          <li>Emily Davis</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Prescriptions</h2>
+      <div class="prescriptions">
+        <div class="prescription">
+          <h3>John Doe</h3>
+          <p>Antibiotics</p>
+          <p>1 Pill, Twice a day, for 7 days</p>
+        </div>
+        <div class="prescription">
+          <h3>Jane Smith</h3>
+          <p>Painkillers</p>
+          <p>2 Pills, Twice a day, for 3 days</p>
+        </div>
+        <div class="prescription">
+          <h3>Mark Johnson</h3>
+          <p>Antacids</p>
+          <p>1 Pill, Once a day, for 10 days</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<script src="script.js"></script>-->
+</body>
+</html>

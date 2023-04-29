@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Doctor Forum</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/doctor_forum.css') }}">
+</head>
+<body>
+	<header>
+		<h1>Doctor Forum</h1>
+	</header>
+
+	<main>
+		<section>
+			<h2>Questions</h2>
+			<ul>
+				{% for row in data %}
+				<li>
+					<h3>{{ row[1] }}</h3>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Doctor Forum</p>
+	</footer>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

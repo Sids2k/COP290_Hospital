@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hospital Staff Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/staff_home.css') }}">
+</head>
+<body>
+	<header>
+		<h1>Hospital Staff Dashboard</h1>
+		<button id="logout-btn"><a href="{{url_for('home')}}">Log Out</a></button>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#">Patients</a></li>
+			<li><a href="#">Appointments</a></li>
+			<li><a href="#">Messages</a></li>
+			<li><a href="#">Reports</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section>
+			<h2>Recent Patients</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>DOB</th>
+						<th>Admitted</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>John Doe</td>
+						<td>01/01/1980</td>
+						<td>04/28/2023</td>
+					</tr>
+					<tr>
+						<td>Jane Smith</td>
+						<td>05/22/1975</td>
+						<td>04/27/2023</td>
+					</tr>
+					<tr>
+						<td>Bob Johnson</td>
+						<td>11/10/1950</td>
+						<td>04/26/2023</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section>
+				<h2>Upcoming Appointments</h2>
+				<ul>
+					<li>
+						<h3>John Doe</h3>
+						<p>04/30/2023 10:00 AM</p>
+					</li>
+					<li>
+						<h3>Jane Smith</h3>
+						<p>05/01/2023 2:00 PM</p>
+					</li>
+					<li>
+						<h3>Bob Johnson</h3>
+						<p>05/02/2023 9:00 AM</p>
+					</li>
+				</ul>
+		</section>
+
+		<section>
+			<h2>Messages</h2>
+			<ul>
+				<li>
+					<h3>New Message</h3>
+					<p>From: John Smith</p>
+					<p>Subject: Follow up on patient</p>
+				</li>
+				<li>
+					<h3>New Message</h3>
+					<p>From: Jane Doe</p>
+					<p>Subject: Schedule Change Request</p>
+				</li>
+				<li>
+					<h3>New Message</h3>
+					<p>From: Bob Johnson</p>
+					<p>Subject: Equipment Request</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Hospital Staff Dashboard</p>
+	</footer>
+
+	<!--script type="text/javascript" src="script.js"></script-->
+</body>
+</html>

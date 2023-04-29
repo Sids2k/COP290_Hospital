@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forum</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/forum_styles.css') }}">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Forum</h1>
+        <form id="question-form" class="mb-4" action="submit" method="post" >
+            <div class="form-group">
+                <label for="question-input">Ask a question:</label>
+                <input type="text" id="question-input" class="form-control" name="qn" required>
+                <label for="flag-input">Need answer? (0 for yes, 1 for no):</label>
+                <input type="text" id="flag-input" class="form-control" name="fl" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="questions-container">
+            <h2>Questions:</h2>
+            <ul>
+				{% for row in data %}
+				<li>
+					<h3>{{ row[1] }} </h3>
+				</li>
+				{% endfor %}
+			</ul>
+        </div>
+    </div>
+    <!-- Include Bootstrap JS and custom script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static',filename='js/forum_scripts.js') }}"></script>
+</body>
+
+</html>

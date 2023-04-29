@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/patient_home.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Welcome, John Doe</h1>
+    <button id="viewForumBtn"><a href="{{url_for('askdoctor')}}">View Forum</a></button>
+    <button id="logoutBtn"><a href="{{url_for('home')}}">Log Out</a></button>
+  </header>
+
+  <div class="dashboard">
+    <div class="box">
+      <h2>Appointments</h2>
+      <div class="appointments">
+        <div class="appointment">
+          <h3>Dr. Smith</h3>
+          <p>12:00 PM</p>
+          <p>Pending</p>
+        </div>
+        <div class="appointment">
+          <h3>Dr. Johnson</h3>
+          <p>2:00 PM</p>
+          <p>Confirmed</p>
+        </div>
+        <div class="appointment">
+          <h3>Dr. Williams</h3>
+          <p>3:30 PM</p>
+          <p>Cancelled</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Medical History</h2>
+      <div class="history">
+        <ul>
+          <li>2021-01-01: Flu</li>
+          <li>2022-03-15: Sinus Infection</li>
+          <li>2023-02-10: Stomachache</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Bills</h2>
+      <div class="bills">
+        <div class="bill">
+          <h3>2023-03-01</h3>
+          <p>$200.00</p>
+          <p>Paid</p>
+        </div>
+        <div class="bill">
+          <h3>2023-04-01</h3>
+          <p>$150.00</p>
+          <p>Due</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
