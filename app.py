@@ -144,7 +144,7 @@ def register():
         #hashed_password2 = bcrypt.generate_password_hash(form.confirm_password.data)
         new_user = User(role=form.role.data,username=form.username.data,password=hashed_password,name=form.name.data,age=form.age.data,gender=form.gender.data)
         db.session.add(new_user)
-        db.sessigit gigigigigigon.commit()
+        db.session.commit()
         return redirect(url_for('login'))
     return render_template('register.html',form=form,flag=flag)
 
